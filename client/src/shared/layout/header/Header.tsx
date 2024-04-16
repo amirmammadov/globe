@@ -1,10 +1,20 @@
 import Box from "@mui/material/Box";
 
 import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Stack from "@mui/material/Stack";
+import { InputBase } from "@mui/material";
 
-import { MyHeader, MyStack } from "./header.styled";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import KingBedIcon from "@mui/icons-material/KingBed";
+import LoginIcon from "@mui/icons-material/Login";
+
+import FormControlLabel from "@mui/material/FormControlLabel";
+
+import { useDispatch } from "react-redux";
+import { changeMode } from "../../../redux/appSlice";
+
+import { MyHeader, MyStack, MaterialUISwitch, MyButton } from "./header.styled";
 
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -12,6 +22,14 @@ import { useState } from "react";
 const Header = () => {
   const [t, i18n] = useTranslation("global");
   const [curLang, setCurLang] = useState("en");
+  const [checked, setChecked] = useState(true);
+
+  const dispatch = useDispatch();
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+    dispatch(changeMode());
+  };
 
   const handleLangChange = (event: SelectChangeEvent) => {
     setCurLang(event.target.value as string);
@@ -21,22 +39,43 @@ const Header = () => {
   return (
     <MyHeader>
       <MyStack>
-        <Box>{t("title")}</Box>
-        <Box>Item 2</Box>
-        <Box>Item 3</Box>
-        <Box bgcolor={"background.default"} color={"text.primary"}>
-          <FormControl fullWidth>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={curLang}
-              label={"AZ"}
-              onChange={handleLangChange}
-            >
-              <MenuItem value="az">AZ</MenuItem>
-              <MenuItem value="en">EN</MenuItem>
-            </Select>
-          </FormControl>
+        <Stack direction="row" spacing={2}>
+          <MyButton variant="text" startIcon={<FlightTakeoffIcon />}>
+            {t("header.btn1")}
+          </MyButton>
+          <MyButton
+            variant="text"
+            startIcon={<KingBedIcon />}
+            className="active"
+          >
+            {t("header.btn2")}
+          </MyButton>
+        </Stack>
+        <Box>
+          <img src="./public/assets/icons/logo.png" alt="logo" />
+        </Box>
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <MyButton variant="text" className="active" startIcon={<LoginIcon />}>
+            Login
+          </MyButton>
+          <Select
+            value={curLang}
+            onChange={handleLangChange}
+            input={<InputBase style={{ border: "none" }} />}
+          >
+            <MenuItem value="az">AZ</MenuItem>
+            <MenuItem value="en">EN</MenuItem>
+          </Select>
+          <FormControlLabel
+            control={
+              <MaterialUISwitch
+                sx={{ m: 1 }}
+                checked={checked}
+                onChange={handleChange}
+              />
+            }
+            label={null}
+          />
         </Box>
       </MyStack>
     </MyHeader>

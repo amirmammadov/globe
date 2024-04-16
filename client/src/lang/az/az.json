@@ -1,3 +1,6 @@
 {
-  "title": "Salam Golobe"
+  "header": {
+    "btn1": "Uçuş seç",
+    "btn2": "Hotel seç"
+  }
 }
