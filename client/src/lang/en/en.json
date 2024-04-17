@@ -1,6 +1,7 @@
 {
   "header": {
     "btn1": "Find Flight",
-    "btn2": "Find Stays"
+    "btn2": "Find Stays",
+    "login": "Login"
   }
 }
