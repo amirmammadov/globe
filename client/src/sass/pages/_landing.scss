@@ -3,7 +3,7 @@
 
 .landing {
   &__hero {
-    background-image: url("../../../public/assets/main/hero.jpg");
+    background-image: url("./assets/main/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,21 +27,57 @@
       );
       color: $white;
 
+      @include small-screen {
+        gap: 15px;
+      }
+
       &__title3 {
         font-size: 45px;
         font-weight: 500;
         text-transform: capitalize;
+
+        @include tablet {
+          font-size: 30px;
+        }
+
+        @include mobile {
+          font-size: 25px;
+        }
+
+        @include small-screen {
+          font-size: 20px;
+        }
       }
 
       &__title2 {
         font-size: 80px;
         font-weight: 500;
         text-transform: uppercase;
+
+        @include tablet {
+          font-size: 60px;
+        }
+
+        @include mobile {
+          font-size: 50px;
+        }
+
+        @include small-screen {
+          font-size: 35px;
+        }
       }
 
       &__text {
         font-size: 20px;
         font-weight: 500;
+
+        @include tablet {
+          font-size: 16px;
+        }
+
+        @include small-screen {
+          font-size: 15px;
+        }
       }
     }
   }
