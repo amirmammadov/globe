@@ -1,11 +1,23 @@
+import { useState, useEffect } from "react";
 import "../../../sass/layout/_header.scss";
 
 import { useTranslation } from "react-i18next";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+const types = ["/flights", "/hotels"];
 
 const Header = () => {
   const [t, i18n] = useTranslation("global");
+  const [menuActive, setMenuActive] = useState(false);
+  const [activePage, setActivePage] = useState("/");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuActive(false);
+    setActivePage(location.pathname);
+  }, [location]);
 
   const handleLangChange = (value: string) => {
     i18n.changeLanguage(value);
@@ -14,7 +26,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__buttons">
-        <Link to="/flights" className="header__buttons__item">
+        <Link
+          to="/flights"
+          className={`header__buttons__item ${
+            activePage === types[0] && "active"
+          }`}
+        >
           <img
             src="./assets/icons/airplane.png"
             alt="plane"
@@ -22,7 +39,12 @@ const Header = () => {
           />
           <p className="header__buttons__item__text">{t("header.btn1")}</p>
         </Link>
-        <Link to="/hotels" className="header__buttons__item">
+        <Link
+          to="/hotels"
+          className={`header__buttons__item ${
+            activePage === types[1] && "active"
+          }`}
+        >
           <img
             src="./assets/icons/bed.png"
             alt="bed"
@@ -31,13 +53,13 @@ const Header = () => {
           <p className="header__buttons__item__text">{t("header.btn2")}</p>
         </Link>
       </div>
-      <button className="header__logo">
+      <Link to="/" className="header__logo">
         <img
           src="./assets/icons/logo-light.png"
           alt="logo"
           className="header__logo__img"
         />
-      </button>
+      </Link>
       <div className="header__extra">
         <select
           name="lang"
@@ -55,6 +77,27 @@ const Header = () => {
           {t("header.login")}
         </Link>
       </div>
+      <button
+        className={`header__hamburger__btn ${menuActive && "active"}`}
+        onClick={() => setMenuActive((prev) => !prev)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+      {menuActive && (
+        <div className="header__menu">
+          <Link to="/flights" className="header__menu__item">
+            {t("header.btn1")}
+          </Link>
+          <Link to="/hotels" className="header__menu__item">
+            {t("header.btn2")}
+          </Link>
+          <Link to="#" className="header__menu__item">
+            {t("header.login")}
+          </Link>
+        </div>
+      )}
     </header>
   );
 };
