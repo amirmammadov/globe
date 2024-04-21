@@ -1,0 +1,28 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+
+.show {
+  text-decoration: none;
+  @include flexbox($justify: space-between, $align: center, $gap: 6px);
+  cursor: pointer;
+  height: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: $mint-green;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &__img {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__text {
+    color: $black;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}
