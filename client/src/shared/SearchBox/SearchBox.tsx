@@ -3,7 +3,18 @@ import { useState } from "react";
 import "../../sass/shared/_searchBox.scss";
 
 import OptionsInput from "../../components/OptionsInput";
+import DatePicker from "../../components/DatePicker";
 import ShowBtn from "../../components/ShowBtn";
+
+import {
+  searchFrom,
+  searchTo,
+  returnType,
+  classType,
+  passengerTotal,
+  // departDate,
+  // returnDate,
+} from "../../constants";
 
 const tabs = ["flight", "stay"];
 
@@ -43,16 +54,23 @@ const SearchBox = () => {
       </div>
       <div className="search__inputs">
         <div className="search__inputs__item">
-          <OptionsInput />
+          <OptionsInput options={searchFrom} holder="From" keyValue="from" />
+          <OptionsInput options={searchTo} holder="To" keyValue="to" />
         </div>
         <div className="search__inputs__item">
-          <OptionsInput />
+          <OptionsInput options={returnType} holder="Trip" keyValue="trip" />
+        </div>
+        <div className="search__inputs__item date">
+          <DatePicker holder="Depart" keyValue="depart" />
+          <DatePicker holder="Return" keyValue="return" />
         </div>
         <div className="search__inputs__item">
-          <OptionsInput />
-        </div>
-        <div className="search__inputs__item">
-          <OptionsInput />
+          <OptionsInput
+            options={passengerTotal}
+            holder="Passengers"
+            keyValue="passenger"
+          />
+          <OptionsInput options={classType} holder="Class" keyValue="class" />
         </div>
       </div>
       <div className="search__btns">
