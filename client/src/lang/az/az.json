@@ -3,5 +3,18 @@
     "btn1": "Uçuş seç",
     "btn2": "Hotel seç",
     "login": "Hesab yarat"
+  },
+  "landing": {
+    "hero": {
+      "title1": "Digərlərinə yardım etmək",
+      "title2": "yaşa & səyahət et",
+      "title3": "Planınıza uyğun xüsusi təkliflər"
+    },
+    "searchBox": {
+      "tab1": "Uçuşlar",
+      "tab2": "Yerlər",
+      "btn1": "Uçuşları göstər",
+      "btn2": "Otel göstər"
+    }
   }
 }

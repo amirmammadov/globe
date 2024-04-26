@@ -3,5 +3,18 @@
     "btn1": "Find Flight",
     "btn2": "Find Stays",
     "login": "Login"
+  },
+  "landing": {
+    "hero": {
+      "title1": "Helping Others",
+      "title2": "live & travel",
+      "title3": "Special offers to suit your plan"
+    },
+    "searchBox": {
+      "tab1": "Flights",
+      "tab2": "Stays",
+      "btn1": "Show Flights",
+      "btn2": "Show Hotels"
+    }
   }
 }
