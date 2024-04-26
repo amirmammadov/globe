@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs/index";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -31,12 +30,13 @@ export default function BasicDatePicker({ holder }: IProps) {
       <div
         onFocus={handleFocus}
         onBlur={handleBlur}
-        style={{ outline: "none" }}
+        style={{ outline: "none", overflow: "hidden" }}
       >
-        <DemoContainer
+        <DatePicker
           sx={{
-            width: "100%",
+            width: "auto",
             paddingTop: 0,
+            overflow: "hidden",
             "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
               { borderColor: "#8dd3bb", borderWidth: "1.5px" },
             borderRadius: "8px",
@@ -49,14 +49,10 @@ export default function BasicDatePicker({ holder }: IProps) {
               borderColor: "#79747e",
             },
           }}
-          components={["DatePicker"]}
-        >
-          <DatePicker
-            label={focused || selectedDate !== null ? "" : holder}
-            value={selectedDate}
-            onChange={handleDateChange}
-          />
-        </DemoContainer>
+          label={focused || selectedDate !== null ? "" : holder}
+          value={selectedDate}
+          onChange={handleDateChange}
+        />
       </div>
     </LocalizationProvider>
   );
