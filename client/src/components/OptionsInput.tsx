@@ -9,8 +9,8 @@ interface IProps {
   keyValue: string;
 }
 
-const specialValuesOne = ["from", "depart", "passenger"];
-const specialValuesTwo = ["to", "return", "class"];
+const specialValuesOne = ["from", "depart", "passenger", "rooms"];
+const specialValuesTwo = ["to", "return", "class", "guests"];
 
 export default function OptionsInput({ options, holder, keyValue }: IProps) {
   return (

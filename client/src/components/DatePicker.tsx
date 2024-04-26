@@ -30,7 +30,7 @@ export default function BasicDatePicker({ holder }: IProps) {
       <div
         onFocus={handleFocus}
         onBlur={handleBlur}
-        style={{ outline: "none", overflow: "hidden" }}
+        style={{ outline: "none", overflow: "hidden", width: "100%" }}
       >
         <DatePicker
           sx={{

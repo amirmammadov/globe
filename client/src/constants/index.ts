@@ -20,10 +20,25 @@ export const passengerTotal = [
   { title: "5 Passengers" },
 ];
 
-export const departDate = [{ title: "" }];
-
-export const returnDate = [{ title: "" }];
-
 export const classType = [{ title: "Ecenomy" }, { title: "Business" }];
 
 export const returnType = [{ title: "Return" }, { title: "Go" }];
+
+export const destinations = [
+  { title: "Istanbul, Turkey" },
+  { title: "Baku, Azerbaijan" },
+  { title: "Roma, Italy" },
+  { title: "Berlin, Germany" },
+];
+
+export const rooms = [
+  { title: "1 room" },
+  { title: "2 rooms" },
+  { title: "3 rooms" },
+];
+
+export const guests = [
+  { title: "1 guest" },
+  { title: "2 guests" },
+  { title: "3 guests" },
+];

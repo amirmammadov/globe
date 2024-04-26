@@ -17,7 +17,7 @@
   background-color: $white;
   border-radius: 16px;
   box-shadow: $box-shadow;
-  padding: 16px 32px;
+  padding: 24px 32px;
 
   @include x-large-screen {
     width: 95%;
@@ -56,41 +56,6 @@
         font-weight: 500;
         text-transform: capitalize;
       }
-    }
-  }
-
-  &__inputs {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr 1fr;
-    gap: 24px;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    @include desktop {
-      gap: 16px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include mobile {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    &__item {
-      @include flexbox($justify: center, $align: center);
-
-      &.date {
-        border: 1.5px solid $gray;
-        border-radius: 8px;
-      }
-    }
-  }
-
-  &__inputs > *:nth-child(2) {
-    width: 140px;
-
-    @include desktop {
-      width: initial;
     }
   }
 
