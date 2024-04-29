@@ -4,20 +4,24 @@ import { Link } from "react-router-dom";
 
 import { cities } from "../../constants";
 
+import { useTranslation } from "react-i18next";
+
 const Plans = () => {
+  const t = useTranslation("global")[0];
+
   return (
     <section className="landing__plans">
       <div className="landing__plans__header">
         <div className="landing__plans__header__info">
           <div className="landing__plans__header__info__title">
-            Plan your perfect trip
+            {t("landing.plans.title")}
           </div>
           <div className="landing__plans__header__info__desc">
-            Search Flights & Places Hire to our most popular destinations
+            {t("landing.plans.desc")}
           </div>
         </div>
         <Link to="/result" className="landing__plans__header__btn">
-          See more
+          {t("landing.plans.btn")}
         </Link>
       </div>
       <div className="landing__plans__content">

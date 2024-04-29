@@ -15,6 +15,11 @@
       "tab2": "Stays",
       "btn1": "Show Flights",
       "btn2": "Show Hotels"
+    },
+    "plans": {
+      "title": "Plan your perfect trip",
+      "desc": "Search Flights & Places Hire to our most popular destinations",
+      "btn": "See more"
     }
   }
 }

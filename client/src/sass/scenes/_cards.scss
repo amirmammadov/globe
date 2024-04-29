@@ -1,0 +1,11 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+
+.plans__card {
+  @include flexbox($justify: space-between, $align: center, $gap: 24px);
+  padding: 0 5%;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}

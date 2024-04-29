@@ -2,6 +2,7 @@ import "../../sass/pages/_landing.scss";
 
 import SearchBox from "../../shared/SearchBox/SearchBox";
 import Plans from "../../scenes/Landing/Plans";
+import Cards from "../../scenes/Landing/Cards";
 
 import { useTranslation } from "react-i18next";
 
@@ -27,6 +28,7 @@ const Landing = () => {
         <SearchBox />
       </div>
       <Plans />
+      <Cards />
     </main>
   );
 };
