@@ -1,0 +1,169 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.landing__plans {
+  margin-top: 250px;
+  margin-bottom: 80px;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $align: flex-start,
+    $gap: 40px
+  );
+  padding: 0 5%;
+
+  &__header {
+    @include flexbox($justify: space-between, $align: center, $gap: 24px);
+    width: 100%;
+
+    &__info {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $align: flex-start,
+        $gap: 16px
+      );
+
+      &__title {
+        font-size: 32px;
+        font-weight: 600;
+        color: $black;
+
+        @include tablet {
+          font-size: 24px;
+        }
+
+        @include small-screen {
+          font-size: 18px;
+        }
+      }
+
+      &__desc {
+        font-size: 16px;
+        font-weight: 400;
+        color: $black;
+
+        @include tablet {
+          font-size: 13px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      border: 1px solid $mint-green;
+      border-radius: 4px;
+      text-decoration: none;
+      padding: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $black;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      background-color: $white;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: $box-shadow2;
+      @include flexbox($justify: flex-start, $align: center, $gap: 16px);
+      transition: all 0.3s linear;
+
+      @include desktop {
+        gap: 12px;
+        padding: 10px;
+      }
+
+      &:hover {
+        scale: 0.98;
+        transition: all 0.2s linear;
+        cursor: pointer;
+      }
+
+      &__img {
+        max-width: 90px;
+        max-height: 90px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__info {
+        @include flexbox(
+          $direction: column,
+          $justify: center,
+          $align: flex-start,
+          $gap: 16px
+        );
+
+        @include desktop {
+          gap: 10px;
+        }
+
+        &__title {
+          font-size: 16px;
+          font-weight: 600;
+          color: $black;
+        }
+
+        &__includes {
+          @include flexbox($justify: flex-start, $align: center, $gap: 13px);
+
+          &__item {
+            font-size: 14px;
+            font-weight: 500;
+            color: $black;
+            position: relative;
+          }
+
+          &__item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 110%;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    margin-top: 250px;
+  }
+
+  @include mobile {
+    margin-top: 370px;
+  }
+}

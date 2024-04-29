@@ -2,6 +2,8 @@
 @import "../utils/mixins";
 
 .landing {
+  background-color: $bg;
+
   &__hero {
     background-image: url("./assets/main/hero.jpg");
     background-position: center;
