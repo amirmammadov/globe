@@ -1,0 +1,60 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.section__header {
+  @include flexbox($justify: space-between, $align: center, $gap: 24px);
+  width: 100%;
+
+  &__info {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start,
+      $gap: 16px
+    );
+
+    &__title {
+      font-size: 32px;
+      font-weight: 600;
+      color: $black;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include small-screen {
+        font-size: 18px;
+      }
+    }
+
+    &__desc {
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+
+      @include tablet {
+        font-size: 13px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    border: 1px solid $mint-green;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $black;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
