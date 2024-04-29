@@ -8,7 +8,7 @@ interface IProps {
   desc: string;
 }
 
-const landingCardItem = ({ imgUrl, title, desc }: IProps) => {
+const LandingCardItem = ({ imgUrl, title, desc }: IProps) => {
   return (
     <div className="plans__card__item">
       <img
@@ -26,4 +26,4 @@ const landingCardItem = ({ imgUrl, title, desc }: IProps) => {
   );
 };
 
-export default landingCardItem;
+export default LandingCardItem;
