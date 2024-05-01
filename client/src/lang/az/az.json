@@ -20,6 +20,11 @@
       "title": "Səyahətinizi mükəmməl planlaşdırın",
       "desc": "Ən populyar istiqamətlərimizə uçuşlar və yerlər axtarın",
       "btn": "Daha çoxu"
+    },
+    "reviews": {
+      "title": "Rəylər",
+      "desc": "İnsanların Golobe təminatları barədə nə dediyini görün",
+      "btn": "Daha çoxu"
     }
   }
 }

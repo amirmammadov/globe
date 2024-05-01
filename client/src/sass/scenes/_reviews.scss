@@ -1,2 +1,11 @@
 @import "../utils/colors";
 @import "../utils/mixins";
+
+.landing__reviews {
+  padding: 80px 5% 40px 5%;
+
+  &__content {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}

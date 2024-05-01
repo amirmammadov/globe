@@ -3,15 +3,17 @@
 @import "../utils/variables";
 
 .landing__plans {
-  margin-top: 250px;
-  margin-bottom: 80px;
   @include flexbox(
     $direction: column,
     $justify: flex-start,
     $align: flex-start,
     $gap: 40px
   );
-  padding: 0 5%;
+  padding: 250px 5% 80px 5%;
+
+  @include desktop {
+    padding-top: 0;
+  }
 
   &__content {
     width: 100%;

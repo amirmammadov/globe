@@ -19,7 +19,12 @@
     "plans": {
       "title": "Plan your perfect trip",
       "desc": "Search Flights & Places Hire to our most popular destinations",
-      "btn": "See more"
+      "btn": "See all"
+    },
+    "reviews": {
+      "title": "Reviews",
+      "desc": "What people says about Golobe facilities",
+      "btn": "See all"
     }
   }
 }
