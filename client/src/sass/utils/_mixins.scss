@@ -50,7 +50,7 @@
 }
 
 @mixin x-small-screen() {
-  @media (max-width: $s-small-screen) {
+  @media (max-width: $x-small-screen) {
     @content;
   }
 }

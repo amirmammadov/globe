@@ -1,0 +1,79 @@
+@import "../utils/mixins";
+@import "../utils/colors";
+
+.footer {
+  background-color: $mint-green;
+  padding: 32px 5%;
+  @include flexbox($justify: flex-start, $align: flex-start, $gap: 140px);
+
+  @include desktop {
+    gap: 50px;
+  }
+
+  &__logo {
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start,
+      $gap: 24px
+    );
+
+    @include mobile {
+      display: none;
+    }
+
+    &__social {
+      @include flexbox($justify: space-between, $align: center, $gap: 16px);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    @include flexbox($justify: space-between, $align: flex-start, $gap: 24px);
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include x-small-screen {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__col {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $align: flex-start,
+        $gap: 16px
+      );
+
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $black;
+      }
+
+      &__links {
+        @include flexbox(
+          $direction: column,
+          $justify: flex-start,
+          $align: flex-start,
+          $gap: 12px
+        );
+
+        &__item {
+          font-size: 14px;
+          font-weight: 500;
+          color: $black;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
