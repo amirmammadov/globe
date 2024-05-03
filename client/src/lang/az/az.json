@@ -37,6 +37,11 @@
       "title": "Birlikdə səyahət edək",
       "desc": "Ən son təklifləri və xəbərləri kəşf edin və növbəti səyahətinizi bizimlə planlaşdırın.",
       "btnText": "Daha çoxu"
+    },
+    "travel": {
+      "title": "Səyahətə dal",
+      "desc": "Bu mövsümü qeyd etmək üçün bir yerə gedirsiniz?",
+      "btnText": "Daha çoxu"
     }
   }
 }

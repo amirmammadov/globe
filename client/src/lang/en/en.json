@@ -37,6 +37,11 @@
       "title": "Let's go places together",
       "desc": "Discover the latest offers and news and start planning your next trip with us.",
       "btnText": "See All"
+    },
+    "travel": {
+      "title": "Fall into travel",
+      "desc": "Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.",
+      "btnText": "See All"
     }
   }
 }
