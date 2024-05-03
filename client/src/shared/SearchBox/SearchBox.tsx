@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../../sass/shared/_searchBox.scss";
 
@@ -9,12 +9,28 @@ import HotelInputs from "../../scenes/HotelInputs";
 
 import { useTranslation } from "react-i18next";
 
+import { useLocation } from "react-router-dom";
+
 const tabs = ["flight", "stay"];
+
+const availableURLs = ["/flights", "/hotels"];
 
 const SearchBox = () => {
   const [tab, setTab] = useState(tabs[0]);
 
+  const location = useLocation();
+
+  const currentURL = location.pathname;
+
   const t = useTranslation("global")[0];
+
+  useEffect(() => {
+    if (currentURL === "/" || currentURL === "/flights") {
+      setTab(tabs[0]);
+    } else {
+      setTab(tabs[1]);
+    }
+  }, [currentURL]);
 
   const handleTab = (tabValue: string) => {
     setTab(tabValue);
@@ -22,7 +38,14 @@ const SearchBox = () => {
 
   return (
     <div className="search">
-      <div className="search__tabs">
+      {availableURLs.includes(currentURL) && (
+        <div className="search__title">Where are you flying?</div>
+      )}
+      <div
+        className={`search__tabs ${
+          availableURLs.includes(currentURL) && "noTab"
+        }`}
+      >
         <button
           className={`search__tabs__btn ${tab === tabs[0] && "active"}`}
           onClick={() => handleTab(tabs[0])}

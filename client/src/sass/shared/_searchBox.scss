@@ -27,8 +27,18 @@
     padding: 16px;
   }
 
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black;
+  }
+
   &__tabs {
     @include flexbox($justify: flex-start, $align: center, $gap: 16px);
+
+    &.noTab {
+      display: none;
+    }
 
     &__btn {
       text-decoration: none;

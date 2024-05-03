@@ -1,17 +1,10 @@
 @import "../utils/colors";
 @import "../utils/mixins";
 
-.landing {
+.hotels {
   background-color: $bg;
 
   .hero {
     background-image: url("/assets/main/hero.jpg");
-
-    &__content__info {
-      align-items: center;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 100%;
-    }
   }
 }

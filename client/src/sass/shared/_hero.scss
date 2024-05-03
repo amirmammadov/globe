@@ -1,0 +1,99 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-bottom: 140px;
+
+  @include desktop {
+    margin-bottom: 190px;
+  }
+
+  @include mobile {
+    height: 400px;
+    margin-bottom: 340px;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &__info {
+      max-width: 650px;
+      padding: 0 5%;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 100%;
+      height: 100%;
+      @include flexbox(
+        $direction: column,
+        $justify: center,
+        $align: flex-start,
+        $gap: 20px
+      );
+      color: $white;
+
+      @include small-screen {
+        gap: 15px;
+      }
+
+      &__title {
+        font-size: 45px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 55px;
+
+        @include tablet {
+          font-size: 30px;
+        }
+
+        @include mobile {
+          font-size: 25px;
+        }
+
+        @include small-screen {
+          font-size: 20px;
+        }
+      }
+
+      &__title2 {
+        font-size: 80px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include tablet {
+          font-size: 60px;
+        }
+
+        @include mobile {
+          font-size: 50px;
+        }
+
+        @include small-screen {
+          font-size: 35px;
+        }
+      }
+
+      &__desc {
+        font-size: 20px;
+        font-weight: 500;
+
+        @include tablet {
+          font-size: 16px;
+        }
+
+        @include small-screen {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

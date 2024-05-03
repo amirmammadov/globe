@@ -1,3 +1,4 @@
+import "../../sass/shared/_hero.scss";
 import "../../sass/pages/_landing.scss";
 
 import SearchBox from "../../shared/SearchBox/SearchBox";
@@ -12,16 +13,16 @@ const Landing = () => {
 
   return (
     <main className="landing">
-      <div className="landing__hero">
-        <div className="landing__hero__content">
-          <div className="landing__hero__content__info">
-            <h3 className="landing__hero__content__info__title3">
+      <div className="hero">
+        <div className="hero__content">
+          <div className="hero__content__info">
+            <h3 className="hero__content__info__title">
               {t("landing.hero.title1")}
             </h3>
-            <h2 className="landing__hero__content__info__title2">
+            <h2 className="hero__content__info__title2">
               {t("landing.hero.title2")}
             </h2>
-            <p className="landing__hero__content__info__text">
+            <p className="hero__content__info__desc">
               {t("landing.hero.title3")}
             </p>
           </div>

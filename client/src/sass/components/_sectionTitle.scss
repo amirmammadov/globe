@@ -26,6 +26,10 @@
       @include small-screen {
         font-size: 18px;
       }
+
+      @include x-small-screen {
+        font-size: 16px;
+      }
     }
 
     &__desc {
@@ -51,6 +55,10 @@
     font-size: 14px;
     font-weight: 600;
     color: $black;
+
+    @include x-small-screen {
+      font-size: 13px;
+    }
 
     &:hover {
       cursor: pointer;
