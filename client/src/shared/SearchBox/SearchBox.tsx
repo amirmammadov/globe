@@ -39,7 +39,7 @@ const SearchBox = () => {
   return (
     <div className="search">
       {availableURLs.includes(currentURL) && (
-        <div className="search__title">Where are you flying?</div>
+        <div className="search__title">{t("landing.searchBox.text")}</div>
       )}
       <div
         className={`search__tabs ${

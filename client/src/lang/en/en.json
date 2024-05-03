@@ -14,7 +14,8 @@
       "tab1": "Flights",
       "tab2": "Stays",
       "btn1": "Show Flights",
-      "btn2": "Show Hotels"
+      "btn2": "Show Hotels",
+      "text": "Where are you flying?"
     },
     "plans": {
       "title": "Plan your perfect trip",
@@ -25,6 +26,17 @@
       "title": "Reviews",
       "desc": "What people says about Golobe facilities",
       "btn": "See all"
+    }
+  },
+  "flights": {
+    "hero": {
+      "title": "Make your travel whishlist, we'll do the rest",
+      "desc": "Special offers to suit your plan"
+    },
+    "map": {
+      "title": "Let's go places together",
+      "desc": "Discover the latest offers and news and start planning your next trip with us.",
+      "btnText": "See All"
     }
   }
 }
