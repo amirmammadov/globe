@@ -23,7 +23,7 @@
     @include flexbox($justify: center, $align: center);
 
     &.date {
-      border: 1.5px solid $gray;
+      border: 2px solid $mint-green;
       border-radius: 8px;
     }
   }

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { footerData } from "../../../data/footer";
 
+import { IonIcon } from "@ionic/react";
+
 import FooterColumn from "../../../components/FooterColumn";
 
 const Footer = () => {
@@ -15,13 +17,13 @@ const Footer = () => {
         </div>
         <div className="footer__logo__social">
           <Link to="#">
-            <img src="/assets/social/fb.png" alt="fb" />
+            <IonIcon name="logo-facebook" />
           </Link>
           <Link to="#">
-            <img src="/assets/social/ins.png" alt="ins" />
+            <IonIcon name="logo-instagram" />
           </Link>
           <Link to="#">
-            <img src="/assets/social/youtube.png" alt="youtube" />
+            <IonIcon name="logo-youtube" />
           </Link>
         </div>
       </div>

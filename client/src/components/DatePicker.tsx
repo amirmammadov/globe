@@ -38,15 +38,15 @@ export default function BasicDatePicker({ holder }: IProps) {
             paddingTop: 0,
             overflow: "hidden",
             "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-              { borderColor: "#8dd3bb", borderWidth: "1.5px" },
+              { borderColor: "#8dd3bb", borderWidth: "2px" },
             borderRadius: "8px",
             ".MuiOutlinedInput-notchedOutline": {
-              borderColor: "#79747e",
+              borderColor: "#8dd3bb",
               borderRadius: "8px",
               border: "none",
             },
             "&:hover .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#79747e",
+              borderColor: "#8dd3bb",
             },
           }}
           label={focused || selectedDate !== null ? "" : holder}

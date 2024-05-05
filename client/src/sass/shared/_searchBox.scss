@@ -55,9 +55,9 @@
         border-bottom: 4px solid $mint-green;
       }
 
-      &__img {
-        width: 24px;
-        height: 24px;
+      > *:first-child {
+        font-size: 24px;
+        color: $black;
       }
 
       &__text {

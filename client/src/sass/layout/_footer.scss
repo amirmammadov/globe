@@ -24,6 +24,11 @@
 
     &__social {
       @include flexbox($justify: space-between, $align: center, $gap: 16px);
+
+      a > * {
+        font-size: 20px;
+        color: $black;
+      }
     }
   }
 

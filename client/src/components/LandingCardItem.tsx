@@ -19,7 +19,7 @@ const LandingCardItem = ({ imgUrl, title, desc }: IProps) => {
       <div className="plans__card__item__content">
         <div className="plans__card__item__content__title">{title}</div>
         <div className="plans__card__item__content__desc">{desc}</div>
-        <ShowBtn text={`Show ${title}`} icon="show" link="result" />
+        <ShowBtn text={`Show ${title}`} icon="paper-plane" link="result" />
       </div>
       <div className="plans__card__item__overlay" />
     </div>

@@ -22,11 +22,11 @@ export default function OptionsInput({ options, holder, keyValue }: IProps) {
       sx={{
         width: "100%",
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-          { borderColor: "#8dd3bb", borderWidth: "1.5px" },
+          { borderColor: "#8dd3bb", borderWidth: "2px" },
         borderRadius: "8px",
         ".MuiOutlinedInput-notchedOutline": {
-          borderColor: "#79747e",
           borderRadius: "8px",
+          borderWidth: "2px",
           borderTopRightRadius: `${specialValuesOne.includes(keyValue) && "0"}`,
           borderBottomRightRadius: `${
             specialValuesOne.includes(keyValue) && "0"
@@ -37,9 +37,10 @@ export default function OptionsInput({ options, holder, keyValue }: IProps) {
           }`,
           borderRight: `${specialValuesOne.includes(keyValue) && "0"}`,
           borderLeft: `${specialValuesTwo.includes(keyValue) && "0"}`,
+          borderColor: "#8dd3bb",
         },
         "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: "#79747e",
+          borderColor: "#8dd3bb",
         },
       }}
       componentsProps={{

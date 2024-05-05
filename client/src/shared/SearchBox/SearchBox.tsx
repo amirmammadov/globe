@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 
 import { useLocation } from "react-router-dom";
 
+import { IonIcon } from "@ionic/react";
+
 const tabs = ["flight", "stay"];
 
 const availableURLs = ["/flights", "/hotels"];
@@ -50,11 +52,7 @@ const SearchBox = () => {
           className={`search__tabs__btn ${tab === tabs[0] && "active"}`}
           onClick={() => handleTab(tabs[0])}
         >
-          <img
-            src="./assets/icons/airplane.png"
-            alt="plane"
-            className="search__tabs__btn__img"
-          />
+          <IonIcon name="airplane" />
           <p className="search__tabs__btn__text">
             {t("landing.searchBox.tab1")}
           </p>
@@ -64,11 +62,7 @@ const SearchBox = () => {
           className={`search__tabs__btn ${tab === tabs[1] && "active"}`}
           onClick={() => handleTab(tabs[1])}
         >
-          <img
-            src="./assets/icons/bed.png"
-            alt="stays"
-            className="search__tabs__btn__img"
-          />
+          <IonIcon name="bed" />
           <p className="search__tabs__btn__text">
             {t("landing.searchBox.tab2")}
           </p>
@@ -79,7 +73,7 @@ const SearchBox = () => {
         <div className="search__btns">
           <ShowBtn
             text={`${t("landing.searchBox.btn1")}`}
-            icon="show"
+            icon="paper-plane"
             link="result"
           />
         </div>
@@ -87,7 +81,7 @@ const SearchBox = () => {
         <div className="search__btns">
           <ShowBtn
             text={`${t("landing.searchBox.btn2")}`}
-            icon="hotel"
+            icon="business"
             link="result"
           />
         </div>
