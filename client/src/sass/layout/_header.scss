@@ -31,9 +31,9 @@
         border-bottom: 5px solid $mint-green;
       }
 
-      &__img {
-        width: 24px;
-        height: 24px;
+      > *:first-child {
+        font-size: 24px;
+        color: $black;
       }
 
       &__text {
@@ -83,7 +83,7 @@
       font-size: 16px;
       font-weight: 500;
       padding: 15px 20px;
-      background-color: $black;
+      background-color: $mint-green;
       color: $white;
       border-radius: 8px;
     }
