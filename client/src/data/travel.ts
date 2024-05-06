@@ -1,7 +1,7 @@
 export const travelList = [
   {
     id: 1,
-    imgUrl: "melbourne.png",
+    imgUrl: "melbourne.jpg",
     city: "Melbourne",
     desc: "An amazing journey",
     price: "600",
@@ -9,7 +9,7 @@ export const travelList = [
   },
   {
     id: 2,
-    imgUrl: "paris.png",
+    imgUrl: "paris.jpg",
     city: "Paris",
     desc: "A Paris adventure",
     price: "700",
@@ -17,7 +17,7 @@ export const travelList = [
   },
   {
     id: 3,
-    imgUrl: "london.png",
+    imgUrl: "london.jpg",
     city: "London",
     desc: "London eye adventure",
     price: "500",
@@ -25,7 +25,7 @@ export const travelList = [
   },
   {
     id: 4,
-    imgUrl: "columbia.png",
+    imgUrl: "columbia.jpg",
     city: "Columbia",
     desc: "Amazing streets",
     price: "800",

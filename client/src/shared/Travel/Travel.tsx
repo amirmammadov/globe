@@ -41,6 +41,7 @@ const Travel = () => {
                 Book Flight
               </button>
             </div>
+            <div className="travel__content__item__overlay" />
           </div>
         ))}
       </div>
