@@ -1,0 +1,66 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+
+.flight__results {
+  padding: 48px 5%;
+  background-color: $bg;
+
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $align: flex-start,
+    $gap: 32px
+  );
+
+  &__inputs {
+    padding: 32px 24px;
+    border-radius: 16px;
+    background-color: $white;
+    box-shadow: $box-shadow;
+
+    @include flexbox($justify: space-between, $align: center, $gap: 24px);
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &__btn {
+      align-self: stretch;
+      background-color: $mint-green;
+      border: none;
+      outline: none;
+      width: 60px;
+      border-radius: 8px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+
+      @include desktop {
+        align-self: auto;
+        width: 50px;
+        height: 50px;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  &__show {
+    @include flexbox($justify: space-between, $align: flex-start, $gap: 16px);
+    width: 100%;
+
+    &__filters {
+      flex: 3;
+      border-right: 0.5px solid $mint-green;
+      padding-right: 16px;
+    }
+
+    &__content {
+      flex: 9;
+    }
+  }
+}

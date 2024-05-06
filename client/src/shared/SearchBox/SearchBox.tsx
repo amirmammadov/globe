@@ -74,7 +74,7 @@ const SearchBox = () => {
           <ShowBtn
             text={`${t("landing.searchBox.btn1")}`}
             icon="paper-plane"
-            link="result"
+            link="flight-results"
           />
         </div>
       ) : (
@@ -82,7 +82,7 @@ const SearchBox = () => {
           <ShowBtn
             text={`${t("landing.searchBox.btn2")}`}
             icon="business"
-            link="result"
+            link="hotel-results"
           />
         </div>
       )}

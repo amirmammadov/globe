@@ -36,7 +36,7 @@ const Reviews = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        speed={10000}
+        speed={7000}
         breakpoints={{
           200: {
             slidesPerView: 1,

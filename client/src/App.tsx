@@ -4,6 +4,7 @@ import Layout from "./shared/layout";
 import Landing from "./pages/landing/Landing";
 import Flights from "./pages/flights/Flights";
 import Hotels from "./pages/hotels/Hotels";
+import FlightResults from "./pages/flight-results/FlightResults";
 
 const App = () => {
   return (
@@ -12,6 +13,8 @@ const App = () => {
         <Route path="/" element={<Landing />} />
         <Route path="/flights" element={<Flights />} />
         <Route path="/hotels" element={<Hotels />} />
+        <Route path="/flight-results" element={<FlightResults />} />
+        <Route path="/hotel-results" element={<Hotels />} />
       </Routes>
     </Layout>
   );
