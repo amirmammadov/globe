@@ -1,6 +1,7 @@
 import "../../sass/shared/_hero.scss";
 import "../../sass/pages/_hotels.scss";
 
+import Recents from "../../scenes/Hotels/Recents";
 import Travel from "../../shared/Travel/Travel";
 import ImgSlider from "../../shared/ImgSlider/ImgSlider";
 
@@ -22,6 +23,7 @@ const Hotels = () => {
         </div>
         <SearchBox />
       </div>
+      <Recents />
       <Travel />
       <ImgSlider />
     </main>

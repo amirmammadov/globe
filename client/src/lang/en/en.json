@@ -49,5 +49,10 @@
       "btnText": "Book Flight",
       "cardText": "From"
     }
+  },
+  "hotels": {
+    "recents": {
+      "title": "Your recent searches"
+    }
   }
 }

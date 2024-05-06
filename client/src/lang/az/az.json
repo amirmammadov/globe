@@ -48,6 +48,9 @@
       "desc": "Səyahət etmək günlük həyatın təzyiq və tələslərindən uzaq olmağın ən yaxşı yoludur. Bu, evdəki problemləri, frustrasiyaları və qorxuları unudmağa kömək edir. Səfərimiz zamanı həyatı müxtəlif şəkildə yaşayırıq. Yeni yerləri, mədəniyyətləri, mətbəxləri, ənənələri və yaşama üsullarını kəşf edirik.",
       "btnText": "Uçuşu sifariş et",
       "cardText": "Indi"
+    },
+    "recents": {
+      "title": "Ən son axtarışların"
     }
   }
 }

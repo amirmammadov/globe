@@ -26,10 +26,6 @@
       @include small-screen {
         font-size: 18px;
       }
-
-      @include x-small-screen {
-        font-size: 16px;
-      }
     }
 
     &__desc {

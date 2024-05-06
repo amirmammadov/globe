@@ -1,0 +1,106 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.hotel__recents {
+  padding: 80px 5% 0 5%;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $align: flex-start,
+    $gap: 32px
+  );
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: $black;
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include small-screen {
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    @include flexbox($justify: space-between, $align: center, $gap: 20px);
+    width: 100%;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      gap: 10px;
+    }
+
+    @include small-screen {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
+
+    &__item {
+      @include flexbox($justify: flex-start, $align: center, $gap: 12px);
+      flex-grow: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__img {
+        min-width: 90px;
+        height: 90px;
+
+        @include mobile {
+          min-width: 80px;
+          height: 80px;
+        }
+
+        @include small-screen {
+          min-width: 100px;
+          height: 100px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+
+      &__info {
+        @include flexbox(
+          $direction: column,
+          $justify: center,
+          $align: flex-start,
+          $gap: 8px
+        );
+
+        &__title {
+          font-size: 16px;
+          font-weight: 600;
+          color: $black;
+
+          @include mobile {
+            font-size: 15px;
+          }
+        }
+
+        &__places {
+          font-size: 15px;
+          font-weight: 400;
+          color: $gray;
+
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
