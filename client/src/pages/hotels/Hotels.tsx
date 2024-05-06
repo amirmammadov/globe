@@ -1,6 +1,9 @@
 import "../../sass/shared/_hero.scss";
 import "../../sass/pages/_hotels.scss";
 
+import Travel from "../../shared/Travel/Travel";
+import ImgSlider from "../../shared/ImgSlider/ImgSlider";
+
 import SearchBox from "../../shared/SearchBox/SearchBox";
 
 const Hotels = () => {
@@ -19,6 +22,8 @@ const Hotels = () => {
         </div>
         <SearchBox />
       </div>
+      <Travel />
+      <ImgSlider />
     </main>
   );
 };

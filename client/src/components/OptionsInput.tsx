@@ -42,6 +42,7 @@ export default function OptionsInput({ options, holder, keyValue }: IProps) {
         "&:hover .MuiOutlinedInput-notchedOutline": {
           borderColor: "#8dd3bb",
         },
+        borderColor: "#8dd3bb",
       }}
       componentsProps={{
         paper: {

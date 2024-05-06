@@ -42,6 +42,12 @@
       "title": "Səyahətə dal",
       "desc": "Bu mövsümü qeyd etmək üçün bir yerə gedirsiniz?",
       "btnText": "Daha çoxu"
+    },
+    "imgSlider": {
+      "title": "Sri Lanka səyahəti",
+      "desc": "Səyahət etmək günlük həyatın təzyiq və tələslərindən uzaq olmağın ən yaxşı yoludur. Bu, evdəki problemləri, frustrasiyaları və qorxuları unudmağa kömək edir. Səfərimiz zamanı həyatı müxtəlif şəkildə yaşayırıq. Yeni yerləri, mədəniyyətləri, mətbəxləri, ənənələri və yaşama üsullarını kəşf edirik.",
+      "btnText": "Uçuşu sifariş et",
+      "cardText": "Indi"
     }
   }
 }

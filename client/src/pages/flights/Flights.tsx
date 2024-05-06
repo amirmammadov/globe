@@ -2,6 +2,7 @@ import "../../sass/shared/_hero.scss";
 import "../../sass/pages/_flights.scss";
 
 import Travel from "../../shared/Travel/Travel";
+import ImgSlider from "../../shared/ImgSlider/ImgSlider";
 
 import SearchBox from "../../shared/SearchBox/SearchBox";
 
@@ -26,6 +27,7 @@ const Flights = () => {
         <SearchBox />
       </div>
       <Travel />
+      <ImgSlider />
     </main>
   );
 };
