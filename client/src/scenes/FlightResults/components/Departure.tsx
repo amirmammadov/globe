@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 
+import { chevronDownOutline, chevronUpOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 const marks = [
@@ -47,7 +48,7 @@ const Departure = () => {
           Departure Time
         </div>
         <IonIcon
-          name={`chevron-${isShow ? "up" : "down"}-outline`}
+          icon={isShow ? chevronUpOutline : chevronDownOutline}
           style={{ fontSize: "20px" }}
         />
       </button>

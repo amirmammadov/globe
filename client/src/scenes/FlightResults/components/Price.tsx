@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 
+import { chevronDownOutline, chevronUpOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 const marks = [
@@ -45,7 +46,7 @@ const Price = () => {
       <button onClick={handleShow} className="filters__options__item__header">
         <div className="filters__options__item__header__text">Price</div>
         <IonIcon
-          name={`chevron-${isShow ? "up" : "down"}-outline`}
+          icon={isShow ? chevronUpOutline : chevronDownOutline}
           style={{ fontSize: "20px" }}
         />
       </button>

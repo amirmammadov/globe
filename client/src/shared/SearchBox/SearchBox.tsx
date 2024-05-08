@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 
 import { useLocation } from "react-router-dom";
 
+import { airplane, bed } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 const tabs = ["flight", "stay"];
@@ -52,7 +53,7 @@ const SearchBox = () => {
           className={`search__tabs__btn ${tab === tabs[0] && "active"}`}
           onClick={() => handleTab(tabs[0])}
         >
-          <IonIcon name="airplane" />
+          <IonIcon icon={airplane} />
           <p className="search__tabs__btn__text">
             {t("landing.searchBox.tab1")}
           </p>
@@ -62,7 +63,7 @@ const SearchBox = () => {
           className={`search__tabs__btn ${tab === tabs[1] && "active"}`}
           onClick={() => handleTab(tabs[1])}
         >
-          <IonIcon name="bed" />
+          <IonIcon icon={bed} />
           <p className="search__tabs__btn__text">
             {t("landing.searchBox.tab2")}
           </p>

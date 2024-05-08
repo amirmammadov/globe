@@ -9,7 +9,7 @@ import { IonIcon } from "@ionic/react";
 const ShowBtn = ({ text, icon, link }: IButton) => {
   return (
     <Link to={`/${link}`} className="show">
-      <IonIcon name={icon} />
+      <IonIcon icon={icon} />
       <p className="show__text">{text}</p>
     </Link>
   );

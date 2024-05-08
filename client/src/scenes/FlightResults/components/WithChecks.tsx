@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { chevronDownOutline, chevronUpOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 interface IProps {
@@ -19,7 +20,7 @@ const WithChecks = ({ values, title }: IProps) => {
       <button onClick={handleShow} className="filters__options__item__header">
         <div className="filters__options__item__header__text">{title}</div>
         <IonIcon
-          name={`chevron-${isShow ? "up" : "down"}-outline`}
+          icon={isShow ? chevronUpOutline : chevronDownOutline}
           style={{ fontSize: "20px" }}
         />
       </button>

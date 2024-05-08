@@ -1,6 +1,6 @@
 import "../../sass/scenes/_plans.scss";
 
-import { cities } from "../../constants";
+import { cities } from "../../data/cities";
 
 import SectionTitle from "../../components/SectionTitle";
 

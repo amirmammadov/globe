@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { chevronDownOutline, chevronUpOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 const Rating = () => {
@@ -14,7 +15,7 @@ const Rating = () => {
       <button onClick={handleShow} className="filters__options__item__header">
         <div className="filters__options__item__header__text">Rating</div>
         <IonIcon
-          name={`chevron-${isShow ? "up" : "down"}-outline`}
+          icon={isShow ? chevronUpOutline : chevronDownOutline}
           style={{ fontSize: "20px" }}
         />
       </button>

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { Link, useLocation } from "react-router-dom";
 
+import { airplane, bed } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
 const types = ["/flights", "/hotels"];
@@ -34,7 +35,7 @@ const Header = () => {
             activePage === types[0] && "active"
           }`}
         >
-          <IonIcon name="airplane" />
+          <IonIcon icon={airplane} />
           <p className="header__buttons__item__text">{t("header.btn1")}</p>
         </Link>
         <Link
@@ -43,7 +44,7 @@ const Header = () => {
             activePage === types[1] && "active"
           }`}
         >
-          <IonIcon name="bed" />
+          <IonIcon icon={bed} />
           <p className="header__buttons__item__text">{t("header.btn2")}</p>
         </Link>
       </div>
