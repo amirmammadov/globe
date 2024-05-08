@@ -34,7 +34,7 @@ function valuetext(value: number) {
 }
 
 const Departure = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
 
   const handleShow = () => {
     setIsShow((prev) => !prev);

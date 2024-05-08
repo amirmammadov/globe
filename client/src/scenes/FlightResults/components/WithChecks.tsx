@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const WithChecks = ({ values, title }: IProps) => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
 
   const handleShow = () => {
     setIsShow((prev) => !prev);

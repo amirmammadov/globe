@@ -3,7 +3,7 @@ import { useState } from "react";
 import { IonIcon } from "@ionic/react";
 
 const Rating = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
 
   const handleShow = () => {
     setIsShow((prev) => !prev);

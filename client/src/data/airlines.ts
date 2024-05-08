@@ -1,0 +1,98 @@
+export const airlinesResult = [
+  {
+    id: 1,
+    airline: "Emirates",
+    imgUrl: "emirates.png",
+    rating: 4.2,
+    reviewCount: 54,
+    startFrom: 108,
+    directions: [
+      {
+        id: 1,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+      {
+        id: 2,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+    ],
+  },
+  {
+    id: 2,
+    airline: "Qatar",
+    imgUrl: "qatar.png",
+    rating: 4.2,
+    reviewCount: 54,
+    startFrom: 108,
+    directions: [
+      {
+        id: 1,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+      {
+        id: 2,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+    ],
+  },
+  {
+    id: 3,
+    airline: "Etihad",
+    imgUrl: "etihad.png",
+    rating: 4.2,
+    reviewCount: 54,
+    startFrom: 108,
+    directions: [
+      {
+        id: 1,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+      {
+        id: 2,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+    ],
+  },
+  {
+    id: 4,
+    airline: "Fly Dubai",
+    imgUrl: "flydubai.png",
+    rating: 4.2,
+    reviewCount: 54,
+    startFrom: 108,
+    directions: [
+      {
+        id: 1,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+      {
+        id: 2,
+        time: "12:00 pm - 01:28 pm",
+        isStop: "non stop",
+        duration: "2h 28m",
+        directionCase: "EWR-BNA",
+      },
+    ],
+  },
+];
