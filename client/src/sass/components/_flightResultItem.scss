@@ -9,8 +9,20 @@
   box-shadow: $box-shadow;
   @include flexbox($justify: space-between, $align: flex-start, $gap: 24px);
 
+  @include x-small-screen {
+    flex-direction: column;
+  }
+
   &__img {
     flex: 3;
+
+    @include tablet {
+      flex: 4;
+    }
+
+    @include x-small-screen {
+      flex: 12;
+    }
 
     img {
       width: 100%;
@@ -26,6 +38,15 @@
       $align: flex-start,
       $gap: 24px
     );
+
+    @include tablet {
+      flex: 8;
+    }
+
+    @include x-small-screen {
+      flex: 12;
+      width: 100%;
+    }
 
     &__headline {
       @include flexbox($justify: space-between, $align: flex-start, $gap: 24px);
@@ -47,12 +68,20 @@
           font-size: 13px;
           font-weight: 600;
           color: $black;
+
+          @include tablet {
+            display: none;
+          }
         }
 
         &__count {
           font-size: 14px;
           font-weight: 500;
           color: $black;
+
+          @include x-small-screen {
+            display: none;
+          }
         }
       }
 
@@ -67,12 +96,20 @@
           font-size: 13px;
           font-weight: 500;
           color: $black;
+
+          @include tablet {
+            display: none;
+          }
         }
 
         &__price {
           font-size: 24px;
           font-weight: 700;
           color: $red;
+
+          @include x-small-screen {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -96,6 +133,11 @@
           min-width: 20px;
           min-height: 20px;
           border-radius: 8px;
+
+          @include x-small-screen {
+            min-width: 15px;
+            min-height: 15px;
+          }
         }
 
         input[type="checkbox"]:checked {
@@ -114,12 +156,24 @@
             font-size: 16px;
             font-weight: 600;
             color: $black;
+
+            @include desktop {
+              font-size: 15px;
+            }
+
+            @include x-small-screen {
+              font-size: 14px;
+            }
           }
 
           &__airline {
             font-size: 14px;
             font-weight: 400;
             color: $gray;
+
+            @include desktop {
+              font-size: 13px;
+            }
           }
         }
 
@@ -128,6 +182,15 @@
           font-size: 15px;
           font-weight: 600;
           padding: 0 28px;
+
+          @include desktop {
+            font-size: 14px;
+            padding: 0;
+          }
+
+          @include tablet {
+            display: none;
+          }
         }
 
         &__total {
@@ -138,16 +201,28 @@
             $gap: 4px
           );
 
+          @include tablet {
+            display: none;
+          }
+
           &__hour {
             color: $blackishGreen;
             font-size: 16px;
             font-weight: 600;
+
+            @include desktop {
+              font-size: 15px;
+            }
           }
 
           &__case {
             font-size: 14px;
             font-weight: 400;
             color: $gray;
+
+            @include desktop {
+              font-size: 13px;
+            }
           }
         }
       }

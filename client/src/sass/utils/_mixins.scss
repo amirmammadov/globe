@@ -25,6 +25,12 @@
   }
 }
 
+@mixin large-screen-resultPage() {
+  @media (max-width: $large-screen-resultPage) {
+    @content;
+  }
+}
+
 @mixin desktop() {
   @media (max-width: $desktop) {
     @content;

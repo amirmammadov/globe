@@ -44,9 +44,7 @@ const Departure = () => {
   return (
     <div className="filters__options__item">
       <button onClick={handleShow} className="filters__options__item__header">
-        <div className="filters__options__item__header__text">
-          Departure Time
-        </div>
+        <div className="filters__options__item__header__text">Departure</div>
         <IonIcon
           icon={isShow ? chevronUpOutline : chevronDownOutline}
           style={{ fontSize: "20px" }}

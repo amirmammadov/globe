@@ -5,12 +5,32 @@ import FlightResultItem from "../../components/FlightResultItem";
 
 import { airlinesResult } from "../../data/airlines";
 
+import { filterOutline } from "ionicons/icons";
+import { IonIcon } from "@ionic/react";
+
+import { useDispatch } from "react-redux";
+import { setFilterBtnOpen } from "../../redux/appSlice";
+
 const FlightResultsContent = () => {
+  const dispatch = useDispatch();
+
+  const handleFilterOpen = () => {
+    dispatch(setFilterBtnOpen(true));
+  };
+
   return (
     <div className="resultContent">
       <ResultsTabs />
-      <div className="resultContent__total">
-        Showing 4 of <span> 257 places</span>
+      <div className="resultContent__line">
+        <div className="resultContent__line__total">
+          Showing 4 of <span> 257 places</span>
+        </div>
+        <button
+          className="resultContent__line__filterBtn"
+          onClick={handleFilterOpen}
+        >
+          <IonIcon icon={filterOutline} style={{ fontSize: "22px" }} />
+        </button>
       </div>
       <div className="resultContent__result">
         {airlinesResult.map((airline) => (

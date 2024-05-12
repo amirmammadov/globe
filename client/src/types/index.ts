@@ -3,3 +3,7 @@ export interface IButton {
   icon: string;
   link: string;
 }
+
+export interface IState {
+  filterBtnOpen: boolean;
+}

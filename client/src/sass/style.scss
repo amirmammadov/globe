@@ -2,6 +2,10 @@
 
 @import "./base/reset";
 
+html.no-scroll {
+  overflow-y: hidden;
+}
+
 body {
   min-height: 100vh;
   max-width: 1920px;

@@ -1,13 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = {
+  filterBtnOpen: false,
+};
 
 export const appSlice = createSlice({
   name: "app",
   initialState,
-  reducers: {},
+  reducers: {
+    setFilterBtnOpen: (state, action) => {
+      state.filterBtnOpen = action.payload;
+    },
+  },
 });
 
-// export const {} = appSlice.actions;
+export const { setFilterBtnOpen } = appSlice.actions;
 
 export default appSlice.reducer;

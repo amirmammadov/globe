@@ -53,14 +53,55 @@
     @include flexbox($justify: space-between, $align: flex-start, $gap: 16px);
     width: 100%;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     &__filters {
       flex: 3;
       border-right: 0.5px solid $mint-green;
       padding-right: 16px;
+
+      @include large-screen-resultPage {
+        flex: 2;
+      }
+
+      @include mobile {
+        display: none;
+
+        &.active {
+          display: initial;
+          width: 100%;
+          border-right: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 100;
+          height: 100vh;
+        }
+
+        > *:first-child {
+          width: 50%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          padding: 20px;
+          background-color: $white;
+          z-index: 101;
+          height: 100vh;
+          justify-content: flex-start;
+        }
+      }
     }
 
     &__content {
       flex: 9;
+
+      @include mobile {
+        flex: 12;
+      }
     }
   }
 }
