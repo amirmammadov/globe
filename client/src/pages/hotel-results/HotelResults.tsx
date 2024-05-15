@@ -2,20 +2,20 @@ import { useEffect } from "react";
 
 import "../../sass/pages/_search-results.scss";
 
-import FlightsInput from "../../scenes/FlightsInputs";
-import Filters from "../../scenes/FlightResults/Filters";
-import FlightResultsContent from "../../scenes/FlightResultsContent/FlightResultsContent";
+import HotelInputs from "../../scenes/HotelInputs";
+import Filters from "../../scenes/HotelResults/Filters";
+import HotelResultsContent from "../../scenes/HotelResultsContent/HotelResultsContent";
 
 import { useSelector } from "react-redux";
+
+import { IState } from "../../types";
 
 import { searchOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
-import { IState } from "../../types";
-
 import { useDeviceSize } from "../../hooks/useDeviceSize";
 
-const FlightResults = () => {
+const HotelResults = () => {
   const filterBtnOpen = useSelector((state: IState) => state.filterBtnOpen);
 
   const width = useDeviceSize()[0];
@@ -31,7 +31,7 @@ const FlightResults = () => {
   return (
     <main className="search__results">
       <div className="search__results__inputs">
-        <FlightsInput />
+        <HotelInputs />
         <button className="search__results__inputs__btn">
           <IonIcon icon={searchOutline} style={{ fontSize: "20px" }} />
         </button>
@@ -45,11 +45,11 @@ const FlightResults = () => {
           <Filters />
         </div>
         <div className="search__results__show__content">
-          <FlightResultsContent />
+          <HotelResultsContent />
         </div>
       </div>
     </main>
   );
 };
 
-export default FlightResults;
+export default HotelResults;

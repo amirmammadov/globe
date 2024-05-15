@@ -1,7 +1,7 @@
 @import "../utils/colors";
 @import "../utils/mixins";
 
-.flight__results {
+.search__results {
   padding: 48px 5%;
   background-color: $bg;
 
@@ -17,6 +17,7 @@
     border-radius: 16px;
     background-color: $white;
     box-shadow: $box-shadow;
+    width: 100%;
 
     @include flexbox($justify: space-between, $align: center, $gap: 24px);
 

@@ -143,5 +143,10 @@
     background-color: transparent;
     border: none;
     outline: none;
+    display: none;
+
+    @include mobile {
+      display: initial;
+    }
   }
 }

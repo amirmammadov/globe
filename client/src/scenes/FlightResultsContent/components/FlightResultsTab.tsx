@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const tabs = ["cheapest", "best", "quickest"];
 
-const ResultsTabs = () => {
+const FlightResultsTab = () => {
   const [currTab, setCurrTab] = useState(tabs[0]);
 
   const handleCurrTab = (value: string) => {
@@ -50,4 +50,4 @@ const ResultsTabs = () => {
   );
 };
 
-export default ResultsTabs;
+export default FlightResultsTab;

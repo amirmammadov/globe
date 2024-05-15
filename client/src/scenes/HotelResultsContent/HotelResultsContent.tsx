@@ -1,9 +1,9 @@
 import "../../sass/scenes/_searchResultsContent.scss";
 
-import FlightResultsTab from "./components/FlightResultsTab";
-import FlightResultItem from "../../components/FlightResultItem";
+import { hotelsResult } from "../../data/hotels";
 
-import { airlinesResult } from "../../data/airlines";
+import HotelResultsTab from "./components/HotelResultsTab";
+import HotelResultItem from "../../components/HotelResultItem";
 
 import { filterOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
@@ -11,7 +11,7 @@ import { IonIcon } from "@ionic/react";
 import { useDispatch } from "react-redux";
 import { setFilterBtnOpen } from "../../redux/appSlice";
 
-const FlightResultsContent = () => {
+const HotelResultsContent = () => {
   const dispatch = useDispatch();
 
   const handleFilterOpen = () => {
@@ -20,7 +20,7 @@ const FlightResultsContent = () => {
 
   return (
     <div className="resultContent">
-      <FlightResultsTab />
+      <HotelResultsTab />
       <div className="resultContent__line">
         <div className="resultContent__line__total">
           Showing 4 of <span> 257 places</span>
@@ -33,8 +33,8 @@ const FlightResultsContent = () => {
         </button>
       </div>
       <div className="resultContent__result">
-        {airlinesResult.map((airline) => (
-          <FlightResultItem key={airline.id} {...airline} />
+        {hotelsResult.map((hotel) => (
+          <HotelResultItem key={hotel.id} {...hotel} />
         ))}
       </div>
       <button className="resultContent__moreBtn">See more results</button>
@@ -42,4 +42,4 @@ const FlightResultsContent = () => {
   );
 };
 
-export default FlightResultsContent;
+export default HotelResultsContent;

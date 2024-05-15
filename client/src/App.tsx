@@ -5,6 +5,8 @@ import Landing from "./pages/landing/Landing";
 import Flights from "./pages/flights/Flights";
 import Hotels from "./pages/hotels/Hotels";
 import FlightResults from "./pages/flight-results/FlightResults";
+import HotelResults from "./pages/hotel-results/HotelResults";
+import NotFound from "./pages/not-found/NotFound";
 
 const App = () => {
   return (
@@ -14,7 +16,8 @@ const App = () => {
         <Route path="/flights" element={<Flights />} />
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/flight-results" element={<FlightResults />} />
-        <Route path="/hotel-results" element={<Hotels />} />
+        <Route path="/hotel-results" element={<HotelResults />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );
