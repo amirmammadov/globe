@@ -129,6 +129,10 @@
               @include large-screen-resultPage {
                 font-size: 14px;
               }
+
+              @include tablet {
+                font-size: 12px;
+              }
             }
           }
         }
