@@ -50,7 +50,7 @@ const Header = () => {
       </div>
       <Link to="/" className="header__logo">
         <img
-          src="./assets/icons/logo-light.png"
+          src="/assets/icons/logo-light.png"
           alt="logo"
           className="header__logo__img"
         />

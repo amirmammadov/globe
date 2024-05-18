@@ -3,6 +3,8 @@ import "../sass/components/_flightResultItem.scss";
 import { heartOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 
+import { Link } from "react-router-dom";
+
 interface Direction {
   id: number;
   time: string;
@@ -87,9 +89,12 @@ const FlightResultItem = ({
           <button className="resultItem__info__bottomline__icon">
             <IonIcon icon={heartOutline} style={{ fontSize: "20px" }} />
           </button>
-          <button className="resultItem__info__bottomline__btn">
+          <Link
+            to="/flight-result/1"
+            className="resultItem__info__bottomline__btn"
+          >
             View Deals
-          </button>
+          </Link>
         </div>
       </div>
     </div>
