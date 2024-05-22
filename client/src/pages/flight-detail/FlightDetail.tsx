@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
 import Preview from "../../scenes/FlightDetail/Preview";
+import FlightImgs from "../../scenes/FlightDetail/FlightImgs";
 
 const breadcrumbs = [
   <Link
@@ -41,6 +42,7 @@ const FlightDetail = () => {
         {breadcrumbs}
       </Breadcrumbs>
       <Preview />
+      <FlightImgs />
     </main>
   );
 };
