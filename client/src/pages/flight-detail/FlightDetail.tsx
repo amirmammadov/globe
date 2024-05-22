@@ -1,5 +1,7 @@
 import "../../sass/pages/_flightDetail.scss";
 
+import { availableTickets } from "../../data/tickets";
+
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Typography from "@mui/material/Typography";
@@ -7,6 +9,7 @@ import Link from "@mui/material/Link";
 
 import Preview from "../../scenes/FlightDetail/Preview";
 import FlightImgs from "../../scenes/FlightDetail/FlightImgs";
+import Ticket from "../../scenes/FlightDetail/Ticket";
 
 const breadcrumbs = [
   <Link
@@ -43,6 +46,11 @@ const FlightDetail = () => {
       </Breadcrumbs>
       <Preview />
       <FlightImgs />
+      <div className="flight__detail__tickets">
+        {availableTickets.map((ticket) => (
+          <Ticket key={ticket.id} {...ticket} />
+        ))}
+      </div>
     </main>
   );
 };

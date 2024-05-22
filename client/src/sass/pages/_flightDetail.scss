@@ -11,4 +11,14 @@
     $gap: 30px
   );
   width: 100%;
+
+  &__tickets {
+    width: 100%;
+    @include flexbox(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start,
+      $gap: 40px
+    );
+  }
 }
