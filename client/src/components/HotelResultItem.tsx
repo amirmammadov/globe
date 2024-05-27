@@ -2,6 +2,7 @@ import "../sass/components/_hotelResultItem.scss";
 
 import { location as locationIcon, star, cafe, heart } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
+import { Link } from "react-router-dom";
 
 interface IProps {
   title: string;
@@ -75,9 +76,12 @@ const HotelResultItem = ({
           <div className="hotelItem__content__bottom__icon">
             <IonIcon icon={heart} style={{ fontSize: "20px" }} />
           </div>
-          <button className="hotelItem__content__bottom__btn">
+          <Link
+            to="/hotel-result/5"
+            className="hotelItem__content__bottom__btn"
+          >
             View Place
-          </button>
+          </Link>
         </div>
       </div>
     </div>

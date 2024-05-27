@@ -7,7 +7,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-import Preview from "../../scenes/FlightDetail/Preview";
+import DetailPreview from "../../components/DetailPreview";
 import FlightImgs from "../../scenes/FlightDetail/FlightImgs";
 import Ticket from "../../scenes/FlightDetail/Ticket";
 
@@ -37,21 +37,21 @@ const breadcrumbs = [
 
 const FlightDetail = () => {
   return (
-    <main className="flight__detail">
+    <div className="flight__detail">
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
         aria-label="breadcrumb"
       >
         {breadcrumbs}
       </Breadcrumbs>
-      <Preview />
+      <DetailPreview />
       <FlightImgs />
       <div className="flight__detail__tickets">
         {availableTickets.map((ticket) => (
           <Ticket key={ticket.id} {...ticket} />
         ))}
       </div>
-    </main>
+    </div>
   );
 };
 

@@ -7,6 +7,7 @@ import Hotels from "./pages/hotels/Hotels";
 import FlightResults from "./pages/flight-results/FlightResults";
 import HotelResults from "./pages/hotel-results/HotelResults";
 import FlightDetail from "./pages/flight-detail/FlightDetail";
+import HotelDetail from "./pages/hotel-detail/HotelDetail";
 import NotFound from "./pages/not-found/NotFound";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/flight-results" element={<FlightResults />} />
         <Route path="/hotel-results" element={<HotelResults />} />
         <Route path="/flight-result/:id" element={<FlightDetail />} />
+        <Route path="/hotel-result/:id" element={<HotelDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
