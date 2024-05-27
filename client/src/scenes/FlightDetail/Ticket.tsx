@@ -24,8 +24,7 @@ const Ticket = ({
   startTime,
   endPoint,
   endTime,
-}: // services,
-ITicket) => {
+}: ITicket) => {
   return (
     <div className="ticket">
       <div className="ticket__header">
