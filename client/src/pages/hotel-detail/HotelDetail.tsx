@@ -8,6 +8,7 @@ import Link from "@mui/material/Link";
 import DetailPreview from "../../components/DetailPreview";
 import HotelImgs from "../../scenes/HotelDetail/HotelImgs";
 import Overview from "../../scenes/HotelDetail/Overview";
+import Rooms from "../../scenes/HotelDetail/Rooms";
 
 const breadcrumbs = [
   <Link
@@ -45,6 +46,7 @@ const HotelDetail = () => {
       <DetailPreview hasStar />
       <HotelImgs />
       <Overview />
+      <Rooms />
     </div>
   );
 };

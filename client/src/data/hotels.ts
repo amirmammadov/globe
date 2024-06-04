@@ -51,3 +51,30 @@ export const hotelAdvants = [
   "Near theater",
   "Clean Hotel",
 ];
+
+export const availableRooms = [
+  {
+    id: 1,
+    imgUrl: "hotel-detail2.jpg",
+    advants: ["Superior room", "1 double bed or 2 twin beds"],
+    pricePerNight: 240,
+  },
+  {
+    id: 2,
+    imgUrl: "hotel-detail1.jpg",
+    advants: ["Superior room", "City view", "1 double bed or 2 twin beds"],
+    pricePerNight: 140,
+  },
+  {
+    id: 3,
+    imgUrl: "hotel-detail4.jpg",
+    advants: ["Superior room", "City view", "1 double bed or 2 twin beds"],
+    pricePerNight: 200,
+  },
+  {
+    id: 4,
+    imgUrl: "hotel-detail3.jpg",
+    advants: ["Superior room", "City view", "1 double bed or 2 twin beds"],
+    pricePerNight: 280,
+  },
+];
