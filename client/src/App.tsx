@@ -1,14 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
 import Layout from "./shared/layout";
-import Landing from "./pages/landing/Landing";
-import Flights from "./pages/flights/Flights";
-import Hotels from "./pages/hotels/Hotels";
-import FlightResults from "./pages/flight-results/FlightResults";
-import HotelResults from "./pages/hotel-results/HotelResults";
-import FlightDetail from "./pages/flight-detail/FlightDetail";
-import HotelDetail from "./pages/hotel-detail/HotelDetail";
-import NotFound from "./pages/not-found/NotFound";
+
+import {
+  Flights,
+  Landing,
+  Hotels,
+  FlightResults,
+  HotelResults,
+  FlightDetail,
+  HotelDetail,
+  NotFound,
+} from "./pages/export";
 
 const App = () => {
   return (

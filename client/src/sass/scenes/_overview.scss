@@ -1,0 +1,141 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.hotel__overview {
+  width: 100%;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $align: flex-start,
+    $gap: 16px
+  );
+  padding: 64px 0;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+
+  @include small-screen {
+    padding: 32px 0;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black;
+
+    @include small-screen {
+      font-size: 18px;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+    line-height: 20px;
+
+    @include small-screen {
+      font-size: 15px;
+    }
+
+    &__btn {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $mint-green;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+  &__advants {
+    @include flexbox($justify: flex-start, $align: center, $gap: 16px);
+
+    @include mobile {
+      gap: 8px;
+    }
+
+    @include small-screen {
+      display: none;
+    }
+
+    &__rating,
+    &__item {
+      padding: 16px;
+      border-radius: 12px;
+      width: 160px;
+      height: 120px;
+      border: 1px solid $mint-green;
+      margin-top: 16px;
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $align: flex-start
+      );
+
+      @include desktop {
+        width: 120px;
+        height: 100px;
+      }
+
+      @include tablet {
+        width: 90px;
+        height: auto;
+      }
+
+      @include mobile {
+        width: 70px;
+        padding: 8px;
+        gap: 4px;
+      }
+
+      &__text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $black;
+
+        @include desktop {
+          font-size: 14px;
+        }
+
+        @include tablet {
+          font-size: 13px;
+        }
+      }
+
+      &__icon > *:first-child {
+        @include mobile {
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    &__rating {
+      background-color: $mint-green;
+
+      &__score {
+        font-size: 24px;
+        font-weight: 700;
+        color: $black;
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+
+      &__result {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+
+        @include desktop {
+          font-size: 15px;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+  }
+}

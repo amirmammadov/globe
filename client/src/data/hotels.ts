@@ -44,3 +44,10 @@ export const hotelsResult = [
     mainImgUrl: "hotel-4.jpg",
   },
 ];
+
+export const hotelAdvants = [
+  "Near park",
+  "Near nightlife",
+  "Near theater",
+  "Clean Hotel",
+];
