@@ -9,6 +9,7 @@ import DetailPreview from "../../components/DetailPreview";
 import HotelImgs from "../../scenes/HotelDetail/HotelImgs";
 import Overview from "../../scenes/HotelDetail/Overview";
 import Rooms from "../../scenes/HotelDetail/Rooms";
+import Map from "../../scenes/HotelDetail/Map";
 
 const breadcrumbs = [
   <Link
@@ -47,6 +48,7 @@ const HotelDetail = () => {
       <HotelImgs />
       <Overview />
       <Rooms />
+      <Map />
     </div>
   );
 };
